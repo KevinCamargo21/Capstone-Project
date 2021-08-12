@@ -220,6 +220,8 @@ differently.
   labs(y = 'Number of Rides', x = 'Day of Week', title = 'Members vs Casual Users', subtitle = 'Number of Rides Per Day', fill = 'User Type'
        ,caption = paste0('Data From: ', 'Q2 ', mindate, ' to ', 'Q1 ', maxdate)) + facet_wrap(~member_casual)`
 
+![number_of_rides](https://user-images.githubusercontent.com/88723621/129129329-93393554-40be-4480-920c-33c3285153fd.png)
+
 ### *Bar Chart: Average Duration, Rider Type, Day of Week*
 
 `all_trips_v2 %>% 
@@ -230,6 +232,8 @@ differently.
   ggplot(aes(x = weekday, y = average_duration, fill = member_casual)) + geom_col(position = 'dodge') +
   labs(y = 'Average Ride Duration (sec)', x = 'Day of Week', title = 'Members vs Casual Users', subtitle = 'Average Ride Duration Per Day'
        ,fill = 'User Type', caption = paste0('Data From: ', 'Q2 ', mindate, ' to ', 'Q1 ', maxdate)) + facet_wrap(~member_casual)`
+       
+![average_ride_duration](https://user-images.githubusercontent.com/88723621/129129213-58863d51-bceb-4508-ad01-73bd35f86831.png)
 
 ## Exporting Dataframe to .csv
 
@@ -237,7 +241,7 @@ differently.
 
 `write.csv(counts, file = '~/Desktop/Cyclistic_Trip_Data/avg_ride_length.csv')`
 
-
+[avg_ride_length.csv](https://github.com/KevinCamargo21/Capstone-Project/files/6972442/avg_ride_length.csv)
 
 
  
